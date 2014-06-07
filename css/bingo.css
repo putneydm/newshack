@@ -1,0 +1,95 @@
+/* mixins */
+/* makes a multicolumn responsive box */
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'lato';
+  color: #444; }
+
+.clearfix {
+  height: 0px;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  clear: both; }
+  .clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0; }
+
+.clear {
+  clear: both; }
+
+ul li {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px; }
+
+.bingo_container {
+  width: auto;
+  height: auto;
+  width: 100%;
+  margin-right: 0%;
+  box-sizing: border-box;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: scroll; }
+
+.bingo_grid {
+  width: 100%;
+  margin-right: 0%;
+  box-sizing: border-box;
+  border: 3px solid #d0d0d0;
+  padding: 0px;
+  margin: 0 auto;
+  max-width: 800px;
+  min-width: 550px;
+  background-color: #d0d0d0; }
+  .bingo_grid li {
+    width: 19.5%;
+    margin-right: 0.625%;
+    box-sizing: border-box;
+    float: left;
+    padding-bottom: 20%;
+    position: relative;
+    margin-bottom: 5px;
+    display: relative;
+    overflow: hidden;
+    display: table-cell;
+    background-color: white; }
+    .bingo_grid li:nth-child(5n) {
+      margin-right: 0px; }
+
+.bingo_image {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0px; }
+
+.bingo_tag {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  margin: auto;
+  top: 15%;
+  left: 0;
+  right: 0;
+  padding: 0px 5px;
+  text-align: center;
+  font-size: .9em; }
+  .bingo_tag span {
+    display: block;
+    font-weight: 700;
+    margin-top: 5px;
+    color: #666; }
+    .bingo_tag span:before {
+      content: '#'; }
