@@ -110,7 +110,7 @@ font-size:em(14);
 	background-image:url('../siteart/lightpaperfibers_@2X.png');
 	background-size:300px 500px;
 	border-radius:4px;
-	background-color:rgba(#FF6347, .7);
+	background-color:rgba(#FF6347, .5);
 	padding:20px;
 	box-shadow:(2px 2px 3px #d0d0d0);
 	border:1px solid white;
@@ -123,11 +123,10 @@ font-size:em(14);
 	@include spanner_too (5,800, 0, 5);
 	max-width:800px;
 	margin:0 auto;
-	overflow:scroll;
 	background-image:url('../siteart/lightpaperfibers_@2X.png');
 	background-size:300px 500px;
 	border-radius:4px;
-	background-color:rgba(#FF6347, .7);
+	background-color:rgba(#FF6347, .5);
 	}
 	
 .bingo_grid
@@ -137,7 +136,7 @@ font-size:em(14);
 	margin:0 auto;
 	max-width:800px;
 	min-width:550px;
-	border-top:1px solid beigh;
+	border-top:1px solid biege;
 	border-left:1px solid beigh;
 	border-bottom:1px solid tan;
 	border-right:1px solid tan;
