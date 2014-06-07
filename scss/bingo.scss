@@ -1,0 +1,138 @@
+@import "mixins";
+
+
+*
+	{
+	box-sizing:border-box;
+	}
+
+body
+	{
+	font-family:'lato';
+	color:#444;
+	}
+
+.clearfix
+	{
+	height:0px;
+	margin:0px;
+	padding:0px;
+	width:100%;
+	clear:both;
+
+	&:after {
+		visibility: hidden;
+		display: block;
+		font-size: 0;
+		content: " ";
+		clear: both;
+		height: 0;
+		}
+	}	
+	
+	
+.clear
+	{
+	clear:both;
+	
+	}
+	
+	
+ul
+	{
+	
+	
+	li
+		{
+		list-style-type:none;
+		margin:0px;
+		padding:0px;
+		}
+	}
+
+
+.bingo_container
+	{
+	width:auto;
+	height:auto;
+	@include spanner_too (5,800, 0, 5);
+	max-width:800px;
+	margin:0 auto;
+	overflow:scroll;
+	}
+	
+.bingo_grid
+	{
+	@include spanner_too (5,800, 0, 5);
+	border:3px solid #d0d0d0;
+	padding:0px;
+	margin:0 auto;
+	max-width:800px;
+	min-width:550px;
+	background-color:#d0d0d0;
+	
+		li
+		{
+		@include spanner_too (5, 800, 5, 1);
+		float:left;
+		padding-bottom:20%;
+		position:relative;
+		margin-bottom:5px;
+		display:relative;
+		overflow:hidden;
+		display:table-cell;
+		background-color:white;
+
+		
+			&:nth-child(5n)
+			{
+			margin-right:0px;
+			}		
+		
+		}
+
+	}
+	
+	
+.bingo_image
+	{
+	width:100%;
+	height:auto;
+	position:absolute;
+	margin:auto;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	padding:0px;
+	}
+	
+.bingo_tag
+	{
+	width:100%;
+	height:auto;
+	position:absolute;
+	margin:auto;
+	top:15%;
+	left:0;
+	right:0;
+	padding:0px 5px;
+	text-align:center;
+	font-size:.9em;
+	
+		span
+		{
+		display:block;
+		font-weight:700;
+		margin-top:5px;
+		color:#666;
+			&:before
+			{
+			content:'#';
+			}
+		
+		
+		}
+	
+	}	
+	
