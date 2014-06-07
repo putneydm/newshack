@@ -67,12 +67,23 @@ ul
 {
 @include spanner_too (6, 1000, 0, 1);
 font-family:'Asset', sans-serif;
-
 margin:0px;
 width:100%;
-background-color:rgba(#FF6347, .7);
+background-color:rgba(#FF6347, .5);
 font-weight:100;
 padding:0;
+font-size:em(14);
+
+			@media screen and (min-width:em(600)) 
+				{
+				font-size:em(16);
+				}
+
+			@media screen and (min-width:em(700)) 
+				{
+				font-size:em(18);
+				}
+
 
 
 			li
