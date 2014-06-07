@@ -50,6 +50,48 @@ ul
 		}
 	}
 
+.bingo_headline
+{
+@include spanner_too (6, 1000, 0, 1);
+font-family:'Asset', sans-serif;
+
+margin:0px;
+width:100%;
+background-color:rgba(#FF6347, .7);
+font-weight:100;
+padding:0;
+
+
+			li
+			{
+			@include spanner_too (5, 1000, 0, 1);
+			float:left;
+			text-align:center;
+			padding:20px 0px;
+			font-size:3em;
+			text-align:center;
+			line-height:100%;
+			color:white;
+		
+			
+			}
+
+}
+
+.bingo_outer
+	{
+	@include spanner_too (5,800, 0, 5);
+	max-width:800px;
+	margin:0 auto;
+	overflow:scroll;
+	background-image:url('../siteart/lightpaperfibers_@2X.png');
+	background-size:300px 500px;
+	border-radius:4px;
+	background-color:rgba(#FF6347, .7);
+	padding:20px;
+	box-shadow:(2px 2px 3px #d0d0d0);
+	border:1px solid white;
+	}
 
 .bingo_container
 	{
@@ -59,21 +101,31 @@ ul
 	max-width:800px;
 	margin:0 auto;
 	overflow:scroll;
+	background-image:url('../siteart/lightpaperfibers_@2X.png');
+	background-size:300px 500px;
+	border-radius:4px;
+	background-color:rgba(#FF6347, .7);
 	}
 	
 .bingo_grid
 	{
 	@include spanner_too (5,800, 0, 5);
-	border:3px solid #d0d0d0;
 	padding:0px;
 	margin:0 auto;
 	max-width:800px;
 	min-width:550px;
-	background-color:#d0d0d0;
+	border-top:1px solid beigh;
+	border-left:1px solid beigh;
+	border-bottom:1px solid tan;
+	border-right:1px solid tan;
+	padding:15px;
+	background-color:rgba(#FF6347, .8);
+	
+
 	
 		li
 		{
-		@include spanner_too (5, 800, 5, 1);
+		@include spanner_too (5, 800, 8, 1);
 		float:left;
 		padding-bottom:20%;
 		position:relative;
@@ -81,7 +133,8 @@ ul
 		display:relative;
 		overflow:hidden;
 		display:table-cell;
-		background-color:white;
+		background-image:url('../siteart/lightpaperfibers_@2X.png');
+	background-size:300px 500px;
 
 		
 			&:nth-child(5n)
