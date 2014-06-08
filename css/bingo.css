@@ -26,7 +26,8 @@ i {
 
 h2 {
   font-size: 1.125em;
-  font-weight: 700; }
+  font-weight: 700;
+  margin: 0px 0 20px 0; }
 
 h3 {
   font-size: 0.9375em;
@@ -80,9 +81,13 @@ ul li {
     padding: 0px 4px 1px;
     background-color: white;
     border-radius: 2px;
-    border: 1px solid #d0d0d0; }
+    border: 1px solid #d0d0d0;
+    cursor: pointer;
+    transition: color, background-color .2s; }
+    #holder .close_box:hover {
+      color: white;
+      background-color: #d0d0d0; }
   #holder li {
-    border: 1px solid red;
     width: 100%;
     position: relative;
     padding: 0 0 100% 0;
@@ -171,8 +176,7 @@ ul li {
   background-color: rgba(255, 99, 71, 0.5);
   padding: 20px;
   box-shadow: 2px 2px 3px #d0d0d0;
-  border: 1px solid white;
-  border: 1px solid red; }
+  border: 1px solid white; }
 
 .bingo_container {
   width: auto;
@@ -282,8 +286,7 @@ ul li {
   margin-right: 0%;
   box-sizing: border-box;
   max-width: 1000px;
-  border: 1px solid red;
-  margin: 0 auto; }
+  margin: 20px auto; }
 
 /*
 --------------
@@ -293,8 +296,7 @@ leaderboard page
 .right_side {
   width: 100%;
   margin-right: 0%;
-  box-sizing: border-box;
-  border: 1px solid blue; }
+  box-sizing: border-box; }
   @media screen and (min-width: 31.25em) {
     .right_side {
       width: 50%;
@@ -314,8 +316,8 @@ leaderboard page
   width: 100%;
   margin-right: 0%;
   box-sizing: border-box;
-  border: 1px solid green;
-  height: 1000px; }
+  height: 1000px;
+  border-right: 1px solid #d0d0d0; }
   @media screen and (min-width: 31.25em) {
     .left_side {
       width: 50%;
@@ -433,3 +435,64 @@ leaderboard page
       bottom: 0;
       left: -50%;
       right: -50%; }
+
+.instruct_button, .close_instruct_button {
+  width: 100%;
+  max-width: 250px;
+  height: 40px;
+  color: white;
+  font-weight: 700;
+  font-size: 0.75em;
+  background-color: #52a14b;
+  text-align: center;
+  border-radius: 3px;
+  padding: 12px 0 0 0;
+  margin: 30px auto 30px;
+  cursor: pointer; }
+  .instruct_button:hover, .close_instruct_button:hover {
+    background-color: #376d33; }
+
+.instruct_overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 10000000;
+  display: none; }
+
+.no_scroll {
+  overflow: hidden; }
+
+.instructions {
+  width: 90%;
+  margin: 30px auto 0;
+  padding: 20px 20px 5px;
+  background-image: url("../siteart/lightpaperfibers_@2X.png");
+  background-size: 300px 500px;
+  box-shadow: 3px 3px 4px #d0d0d0;
+  max-width: 500px; }
+  .instructions li {
+    margin: 0 0 20px 0; }
+    .instructions li .hider {
+      display: inline; }
+      @media screen and (min-width: 34.375em) {
+        .instructions li .hider {
+          display: none; } }
+    .instructions li:before {
+      content: '\f0a3';
+      font-family: icon;
+      color: #52a14b;
+      display: inline-block;
+      margin: 0 10px 0 0; }
+  .instructions h2 {
+    font-family: 'Asset', sans-serif;
+    font-size: 0.9375em;
+    text-align: center;
+    color: Red;
+    margin: 0px 0 15px 0;
+    color: #FF6347; }
+    @media screen and (min-width: 28.125em) {
+      .instructions h2 {
+        font-size: 1.25em; } }
