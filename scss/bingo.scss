@@ -97,6 +97,112 @@ ul
 		padding:0px;
 		}
 	}
+	
+	
+#holder
+	{
+	border:1px solid black;
+	position:absolute;
+	width:60%;
+	margin:0 auto;
+	z-index:1000;
+	padding:0;
+	display:none;
+	top:15%;
+	left:0;
+	right:0;
+	background-image:url('../siteart/lightpaperfibers_@2X.png');
+	background-size:300px 500px;
+	box-shadow:3px 3px 3px #999;
+	border:1px solid white;
+	
+	.close_box
+	{
+	position:absolute;
+	right:10px;
+	top:-10px;
+	z-index:100000;
+	color:#d0d0d0;
+	padding:0px 4px 1px;
+	background-color:white;
+	border-radius:2px;
+	border:1px solid #d0d0d0;
+	}
+	
+	
+	
+	li
+		{
+		border:1px solid red;
+		width:100%;
+		position:relative;
+		padding:0 0 100% 0;
+		background-image:none;
+
+	.bingo_image
+	{
+	width:100%;
+	height:auto;
+	position:absolute;
+	margin:auto;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	padding:0px;
+	}
+	
+.bingo_tag
+	{
+	width:100%;
+	height:auto;
+	position:absolute;
+	margin:auto;
+	top:15%;
+	left:0;
+	right:0;
+	padding:0px 5px;
+	text-align:center;
+	font-size:.9em;
+	display:block;
+	}	
+	
+	
+	.hashtag
+		{
+		display:block;
+		font-weight:700;
+		color:#666;
+		position:absolute;
+		bottom:8px;
+		text-align:center;
+		width:100%;
+		margin:0px;
+		font-size:em(14);
+
+				@media screen and (min-width:em(700)) 
+				{
+				font-size:em(16);
+				}
+		
+			&:before
+			{
+			content:'#';
+			}
+		
+		
+		}	
+
+		
+		}
+	
+		.active
+		{
+		border:0px;
+		margin:0px;
+		}
+	
+	}
 
 .bingo_headline
 {
