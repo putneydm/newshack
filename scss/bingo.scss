@@ -25,6 +25,26 @@ body
 	color:#444;
 	}
 	
+	
+a
+	{
+	text-decoration:none;
+	color:inherit;
+	transition:color .3s;
+	
+		&:hover
+		{
+		color:#d0d0d0;
+		}
+	
+	}
+	
+i
+	{
+	font-family:'icon';
+	font-style:normal;
+	}	
+	
 h2
 	{
 	font-size:em(18);
