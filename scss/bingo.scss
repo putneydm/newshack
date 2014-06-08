@@ -275,21 +275,213 @@ font-size:em(14);
 	border:1px solid red;
 	margin:0 auto;
 	}
+
+/*
+--------------
+leaderboard page 
+--------------
+*/
 	
 .right_side
 	{
-	@include spanner_too (8, 1000, 0, 5);
-	float:left;
+	@include spanner_too (8, 1000, 0, 8);
 	border:1px solid blue;
-	height:1000px;
+
+			@media screen and (min-width:em(500)) 
+			{
+			@include spanner_too (8, 1000, 0, 4);
+			float:left;
+			}
+
+			@media screen and (min-width:em(750)) 
+				{
+				@include spanner_too (8, 1000, 0, 5);
+				float:left;
+				height:1000px;
+				}
+
 	}
 	
 .left_side
 	{
-	@include spanner_too (8, 1000, 0, 3);
-	float:left;
+	@include spanner_too (8, 1000, 0, 8);
 	border:1px solid green;
 	height:1000px;
+	
+			@media screen and (min-width:em(500)) 
+			{
+			@include spanner_too (8, 1000, 0, 4);
+			float:left;
+			}
+	
+	
+			@media screen and (min-width:em(750)) 
+			{
+			@include spanner_too (8, 1000, 0, 3);
+			float:left;
+			}
+	
 	}	
 	
+.leaderboard
+	{
+	margin:0px;
+	padding:0px 10px 0 0;
 	
+		li
+		{
+		border-bottom:1px solid #d0d0d0;
+		padding:0 0 10px 0;
+		margin:0 0 10px 0;
+		
+		}
+	
+	}
+	
+.rank
+	{
+	width:32px;
+	float:left;
+	font-size:em(14);
+	font-weight:700;
+	color:#999;	
+	}
+
+.user_avatar
+	{
+	width:45px;
+	height:45px;
+	float:left;
+	margin:4px 0 0 0;
+		
+		img
+		{
+		width:100%;
+		}	
+	}
+	
+.user_info	
+	{
+	width:auto;
+	display:inline-table-cell;
+	margin-left:85px;
+	}
+	
+.bingo_status
+	{
+	font-size:em(13);
+	margin:0 0 5px 0;
+	}
+	
+.last_hashtag
+	{
+	@extend .bingo_status;
+	color:#999;
+		
+		&:before
+		{
+		content:'#';
+		}
+	
+	}	
+	
+.latest_items
+	{
+	@include spanner_too (4, 622, 0, 4);
+	margin:0px;
+	padding:0px;
+	
+	li
+	{
+	@include spanner_too (2, 622, 10, 1);
+	border:1px solid red;
+	float:left;
+	
+		&:nth-child(2n)
+		{
+		margin-right:0px;
+		}
+	
+				@media screen and (min-width:em(500)) 
+				{
+				@include spanner_too (1, 622, 0, 1);
+				}
+	
+				@media screen and (min-width:em(600)) 
+				{
+				@include spanner_too (2, 622, 10, 1);
+				}
+	
+				@media screen and (min-width:em(850)) 
+				{
+				@include spanner_too (3, 622, 10, 1);
+				
+						&:nth-child(2n)
+						{
+						margin-right:1.60772%;
+						}
+				
+						&:nth-child(3n)
+						{
+						margin-right:0px;
+						}
+				
+				
+				}
+	
+	.user_avatar
+	{
+	width:30px;
+	height:30px;
+	border:1px solid red;
+				
+				@media screen and (min-width:em(750)) 
+				{
+				width:45px;
+				height:45px;
+				}
+	
+	}
+	
+	.user_info	
+	{
+	width:auto;
+	display:inline-table-cell;
+	margin-left:38px;
+	border:1px solid red;
+	
+				@media screen and (min-width:em(750)) 
+				{
+				margin-left:52px;
+				}
+	
+	}
+
+	
+	}
+	
+	.tweeted_image
+	{
+	width:100%;
+	padding-bottom:100%;
+	height:100%;
+	text-align:center;
+	position:relative;
+	overflow:hidden;
+	
+	
+		img
+		{
+		height:100%;
+		position:absolute;
+		margin:auto;
+		top:0;
+		bottom:0;
+		left:-50%;
+		right:-50%;
+		}
+	
+	}
+	
+	
+	}
