@@ -102,7 +102,6 @@ ul
 	
 #holder
 	{
-	border:1px solid black;
 	position:absolute;
 	width:60%;
 	margin:0 auto;
@@ -116,6 +115,7 @@ ul
 	background-size:300px 500px;
 	box-shadow:3px 3px 3px #999;
 	border:1px solid white;
+	border-radius:3px;
 	
 	.close_box
 	{
@@ -136,7 +136,6 @@ ul
 		color:white;
 		background-color:#d0d0d0;
 	
-	
 		}
 	
 	}
@@ -149,6 +148,7 @@ ul
 		position:relative;
 		padding:0 0 100% 0;
 		background-image:none;
+		border:0px;
 
 	.bingo_image
 	{
@@ -169,12 +169,12 @@ ul
 	height:auto;
 	position:absolute;
 	margin:auto;
-	top:15%;
+	top:25%;
 	left:0;
 	right:0;
-	padding:0px 5px;
+	padding:5px 20px;
 	text-align:center;
-	font-size:.9em;
+	font-size:em(22);
 	display:block;
 	}	
 	
@@ -200,8 +200,7 @@ ul
 			{
 			content:'#';
 			}
-		
-		
+
 		}	
 
 		
@@ -211,6 +210,15 @@ ul
 		{
 		border:0px;
 		margin:0px;
+		
+			.hashtag
+			{
+			color:white;
+			bottom:15px;
+			font-size:em(18);
+			
+			}
+		
 		}
 	
 	}
@@ -224,7 +232,13 @@ width:100%;
 background-color:rgba(#FF6347, .5);
 font-weight:100;
 padding:0;
-font-size:em(14);
+font-size:em(8);
+
+			@media screen and (min-width:em(400)) 
+				{
+				font-size:em(13);
+				}
+
 
 			@media screen and (min-width:em(600)) 
 				{
@@ -248,17 +262,30 @@ font-size:em(14);
 			text-align:center;
 			line-height:100%;
 			color:white;	
-			text-shadow:1px 1px 0 #d7533c, 2px 2px 0 #d7533c, 3px 3px 0 #d7533c, 4px 4px 0 #d7533c;
+			text-shadow:1px 1px 0 #d7533c, 2px 2px 0 #d7533c;
+				
+				@media screen and (min-width:em(500)) 
+				{
+				text-shadow:1px 1px 0 #d7533c, 2px 2px 0 #d7533c, 3px 3px 0 #d7533c, 4px 4px 0 #d7533c;
+				}
+			
 			}
 
 }
+
+.leaderboard_link
+	{
+	font-size:em(14);
+	font-weight:700;
+	color:#666;
+	text-align:center;
+	}
 
 .bingo_outer
 	{
 	@include spanner_too (5,800, 0, 5);
 	max-width:800px;
-	margin:0 auto;
-	overflow:scroll;
+	margin:0 auto 50px;
 	background-image:url('../siteart/lightpaperfibers_@2X.png');
 	background-size:300px 500px;
 	border-radius:4px;
@@ -312,6 +339,7 @@ font-size:em(14);
 		font-size:em(14);
 		border-radius:3px;
 		border:2px solid #fe8066;
+		overflow:hidden;
 
 			@media screen and (min-width:em(550)) 
 				{
@@ -359,14 +387,19 @@ font-size:em(14);
 .bingo_image
 	{
 	width:100%;
-	height:auto;
 	position:absolute;
 	margin:auto;
 	top:0;
 	bottom:0;
-	left:0;
-	right:0;
+	left:-50%;
+	right:-50%;
 	padding:0px;
+
+			@media screen and (min-width:em(700)) 
+				{
+				min-width:140px
+				}
+	
 	}
 	
 .bingo_tag
@@ -397,15 +430,26 @@ font-size:em(14);
 		font-weight:700;
 		color:#666;
 		position:absolute;
-		bottom:8px;
+		bottom:40%;
 		text-align:center;
 		width:100%;
-		margin:0px;
-		font-size:em(14);
+		margin:auto;
+		font-size:em(12);
+		display:none;
+		  white-space: nowrap;
+	  overflow: hidden;
+	  text-overflow: ellipsis;
+		  padding:0 2px;
+		
+					@media screen and (min-width:em(450)) 
+				{
+				display:block;
+				bottom:8px;
+				}
 
 				@media screen and (min-width:em(700)) 
 				{
-				font-size:em(16);
+				font-size:em(14);
 				}
 		
 			&:before
@@ -423,6 +467,7 @@ font-size:em(14);
 	max-width:1000px;
 	margin:20px auto;
 	}
+
 
 /*
 --------------
