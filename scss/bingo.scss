@@ -645,3 +645,104 @@ leaderboard page
 	
 	
 	}
+	
+	
+.instruct_button
+	{
+	width:100%;
+	max-width:250px;
+	height:40px;
+	color:white;
+	font-weight:700;
+	font-size:em(12);
+	background-color:#52a14b;
+	text-align:center;
+	border-radius:3px;
+	padding:12px 0 0 0;
+	margin:30px auto 30px;
+	cursor:pointer;
+	
+		&:hover
+			{
+			background-color:darken( #52a14b, 15% );
+			}
+	
+	}
+	
+	
+.instruct_overlay
+	{
+	width:100%;
+	height:100%;
+	background-color:rgba(white, .8);
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:10000000;
+	display:none;
+	}
+	
+.no_scroll
+	{
+	overflow:hidden;
+	}
+	
+.instructions	
+	{
+	width:90%;
+	margin:30px auto 0;
+	padding:20px 20px 5px;
+	background-image:url('../siteart/lightpaperfibers_@2X.png');
+	background-size:300px 500px;
+	box-shadow:3px 3px 4px #d0d0d0;
+	max-width:500px;
+
+		li
+		{
+		margin:0 0 20px 0;
+		
+			.hider
+			{
+			display:inline;
+			
+				@media screen and (min-width:em(550)) 
+				{
+				display:none;
+				}
+			}
+			
+		
+		&:before
+			{
+			content:'\f0a3';
+			font-family:icon;
+			color:#52a14b;
+			display:inline-block;
+			margin:0 10px 0 0;
+			
+			}
+		
+		}
+	
+		h2
+		{
+		font-family:'Asset', sans-serif;
+		font-size:em(15);
+		text-align:center;
+		color:Red;
+		margin:0px 0 15px 0;
+		color:#FF6347;
+		
+					@media screen and (min-width:em(450)) 
+				{
+				font-size:em(20);
+				}
+		
+		}
+	
+	}
+
+.close_instruct_button
+	{
+	@extend .instruct_button;	
+	}
