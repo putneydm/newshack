@@ -255,6 +255,7 @@ font-size:em(14);
 	padding:20px;
 	box-shadow:(2px 2px 3px #d0d0d0);
 	border:1px solid white;
+	border:1px solid red;
 	}
 
 .bingo_container
@@ -272,11 +273,9 @@ font-size:em(14);
 	
 .bingo_grid
 	{
-	@include spanner_too (5,800, 0, 5);
 	padding:0px;
 	margin:0 auto;
 	max-width:800px;
-	min-width:550px;
 	border-top:1px solid biege;
 	border-left:1px solid beigh;
 	border-bottom:1px solid tan;
@@ -296,11 +295,18 @@ font-size:em(14);
 		position:relative;
 		overflow:hidden;
 		display:table-cell;
-		background-image:url('../siteart/lightpaperfibers_@2X.png');
-		background-size:300px 500px;
+		background-image:url('../siteart/mag.svg'), url('../siteart/lightpaperfibers_@2X.png');
+		background-size:40%, 300px 500px;
+		background-repeat:no-repeat, repeat;
+		background-position: center center;
 		font-size:em(14);
 		border-radius:3px;
 		border:2px solid #fe8066;
+
+			@media screen and (min-width:em(550)) 
+				{
+				background-image:none, url('../siteart/lightpaperfibers_@2X.png');
+				}
 
 				@media screen and (min-width:em(700)) 
 				{
