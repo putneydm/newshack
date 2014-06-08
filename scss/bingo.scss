@@ -128,13 +128,23 @@ ul
 	background-color:white;
 	border-radius:2px;
 	border:1px solid #d0d0d0;
+	cursor:pointer;
+	transition: color, background-color .2s;
+	
+		&:hover
+		{
+		color:white;
+		background-color:#d0d0d0;
+	
+	
+		}
+	
 	}
 	
 	
 	
 	li
 		{
-		border:1px solid red;
 		width:100%;
 		position:relative;
 		padding:0 0 100% 0;
