@@ -533,13 +533,19 @@ leaderboard page
 	li
 	{
 	@include spanner_too (2, 622, 10, 1);
-	border:1px solid red;
 	float:left;
 	
 		&:nth-child(2n)
 		{
 		margin-right:0px;
 		}
+		
+		&:nth-child(2n+1)
+		{
+		clear:left;
+		}
+
+		
 	
 				@media screen and (min-width:em(500)) 
 				{
@@ -565,15 +571,22 @@ leaderboard page
 						margin-right:0px;
 						}
 				
+						&:nth-child(2n+1)
+						{
+						clear:none;
+						}
+
+						&:nth-child(3n+4)
+						{
+						clear:left;
+						}
 				
 				}
 	
 	.user_avatar
 	{
 	width:30px;
-	height:30px;
-	border:1px solid red;
-				
+	height:30px;				
 				@media screen and (min-width:em(750)) 
 				{
 				width:45px;
@@ -587,7 +600,6 @@ leaderboard page
 	width:auto;
 	display:inline-table-cell;
 	margin-left:38px;
-	border:1px solid red;
 	
 				@media screen and (min-width:em(750)) 
 				{
