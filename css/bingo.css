@@ -350,14 +350,12 @@ leaderboard page
       width: 62.5%;
       margin-right: 0%;
       box-sizing: border-box;
-      float: left;
-      height: 1000px; } }
+      float: left; } }
 
 .left_side {
   width: 100%;
   margin-right: 0%;
   box-sizing: border-box;
-  height: 1000px;
   border-right: 1px solid #d0d0d0; }
   @media screen and (min-width: 31.25em) {
     .left_side {
