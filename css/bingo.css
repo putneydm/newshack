@@ -18,11 +18,10 @@ h2 {
   font-weight: 700; }
 
 h3 {
-  font-size: 1em;
+  font-size: 0.9375em;
   font-weight: 700;
   color: #666;
-  margin: 0 0 5px 0;
-  border: 1px solid red; }
+  margin: 0 0 5px 0; }
 
 .clearfix {
   height: 0px;
@@ -203,28 +202,53 @@ leaderboard page
 --------------
 */
 .right_side {
-  width: 62.5%;
+  width: 100%;
   margin-right: 0%;
   box-sizing: border-box;
-  float: left;
-  border: 1px solid blue;
-  height: 1000px; }
+  border: 1px solid blue; }
+  @media screen and (min-width: 31.25em) {
+    .right_side {
+      width: 50%;
+      margin-right: 0%;
+      box-sizing: border-box;
+      float: left; } }
+  @media screen and (min-width: 46.875em) {
+    .right_side {
+      width: 62.5%;
+      margin-right: 0%;
+      box-sizing: border-box;
+      float: left;
+      height: 1000px; } }
 
 .left_side {
-  width: 37.5%;
+  width: 100%;
   margin-right: 0%;
   box-sizing: border-box;
-  float: left;
   border: 1px solid green;
   height: 1000px; }
+  @media screen and (min-width: 31.25em) {
+    .left_side {
+      width: 50%;
+      margin-right: 0%;
+      box-sizing: border-box;
+      float: left; } }
+  @media screen and (min-width: 46.875em) {
+    .left_side {
+      width: 37.5%;
+      margin-right: 0%;
+      box-sizing: border-box;
+      float: left; } }
 
 .leaderboard {
   margin: 0px;
-  padding: 0px; }
+  padding: 0px 10px 0 0; }
+  .leaderboard li {
+    border-bottom: 1px solid #d0d0d0;
+    padding: 0 0 10px 0;
+    margin: 0 0 10px 0; }
 
 .rank {
   width: 32px;
-  border: 1px solid red;
   float: left;
   font-size: 0.875em;
   font-weight: 700;
@@ -234,12 +258,85 @@ leaderboard page
   width: 45px;
   height: 45px;
   float: left;
-  border: 1px solid red; }
+  margin: 4px 0 0 0; }
   .user_avatar img {
     width: 100%; }
 
 .user_info {
   width: auto;
   display: inline-table-cell;
-  border: 1px solid red;
   margin-left: 85px; }
+
+.bingo_status, .last_hashtag {
+  font-size: 0.8125em;
+  margin: 0 0 5px 0; }
+
+.last_hashtag {
+  color: #999; }
+  .last_hashtag:before {
+    content: '#'; }
+
+.latest_items {
+  width: 100%;
+  margin-right: 0%;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px; }
+  .latest_items li {
+    width: 49.19614%;
+    margin-right: 1.60772%;
+    box-sizing: border-box;
+    border: 1px solid red;
+    float: left; }
+    .latest_items li:nth-child(2n) {
+      margin-right: 0px; }
+    @media screen and (min-width: 31.25em) {
+      .latest_items li {
+        width: 100%;
+        margin-right: 0%;
+        box-sizing: border-box; } }
+    @media screen and (min-width: 37.5em) {
+      .latest_items li {
+        width: 49.19614%;
+        margin-right: 1.60772%;
+        box-sizing: border-box; } }
+    @media screen and (min-width: 53.125em) {
+      .latest_items li {
+        width: 32.26152%;
+        margin-right: 1.60772%;
+        box-sizing: border-box; }
+        .latest_items li:nth-child(2n) {
+          margin-right: 1.60772%; }
+        .latest_items li:nth-child(3n) {
+          margin-right: 0px; } }
+    .latest_items li .user_avatar {
+      width: 30px;
+      height: 30px;
+      border: 1px solid red; }
+      @media screen and (min-width: 46.875em) {
+        .latest_items li .user_avatar {
+          width: 45px;
+          height: 45px; } }
+    .latest_items li .user_info {
+      width: auto;
+      display: inline-table-cell;
+      margin-left: 38px;
+      border: 1px solid red; }
+      @media screen and (min-width: 46.875em) {
+        .latest_items li .user_info {
+          margin-left: 52px; } }
+  .latest_items .tweeted_image {
+    width: 100%;
+    padding-bottom: 100%;
+    height: 100%;
+    text-align: center;
+    position: relative;
+    overflow: hidden; }
+    .latest_items .tweeted_image img {
+      height: 100%;
+      position: absolute;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      left: -50%;
+      right: -50%; }
