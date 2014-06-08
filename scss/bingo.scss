@@ -156,12 +156,28 @@ font-size:em(14);
 		overflow:hidden;
 		display:table-cell;
 		background-image:url('../siteart/lightpaperfibers_@2X.png');
-	background-size:300px 500px;
+		background-size:300px 500px;
+		font-size:em(14);
+		border-radius:3px;
+		border:2px solid #fe8066;
 
+				@media screen and (min-width:em(700)) 
+				{
+				font-size:em(16);
+				}
+		
 		
 			&:nth-child(5n)
 			{
-			margin-right:0px;
+			margin-right:0px;	
+			}
+			
+			&:nth-child(13)
+			{
+			background-image:url('../siteart/star.svg'), url('../siteart/lightpaperfibers_@2X.png');
+			background-size:70%, 300px 500px;
+			background-repeat:no-repeat, repeat;
+			background-position: center center;
 			}		
 		
 		}
