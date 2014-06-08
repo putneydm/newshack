@@ -108,7 +108,7 @@ ul
 	z-index:1000;
 	padding:0;
 	display:none;
-	top:15%;
+	top:30%;
 	left:0;
 	right:0;
 	background-image:url('../siteart/lightpaperfibers_@2X.png');
@@ -174,8 +174,14 @@ ul
 	right:0;
 	padding:5px 20px;
 	text-align:center;
-	font-size:em(22);
+	font-size:em(18);
 	display:block;
+	
+				@media screen and (min-width:em(500)) 
+				{
+					font-size:em(22);
+				}
+	
 	}	
 	
 	
@@ -290,9 +296,15 @@ font-size:em(8);
 	background-size:300px 500px;
 	border-radius:4px;
 	background-color:rgba(#FF6347, .5);
-	padding:20px;
+	padding:10px;
 	box-shadow:(2px 2px 3px #d0d0d0);
 	border:1px solid white;
+	
+				@media screen and (min-width:em(700)) 
+				{
+				padding:20px;
+				}
+	
 	}
 
 .bingo_container
@@ -317,18 +329,23 @@ font-size:em(8);
 	border-left:1px solid beigh;
 	border-bottom:1px solid tan;
 	border-right:1px solid tan;
-	padding:15px;
+	padding:8px;
 	background-color:rgba(#FF6347, .8);
+	
+				@media screen and (min-width:em(700)) 
+				{
+				padding:15px;
+				}
 	
 
 	
 		li
 		{
-		@include spanner_too (5, 800, 8, 1);
+		@include spanner_too (5, 800, 3, 1);
 		float:left;
 		padding-bottom:20%;
 		position:relative;
-		margin-bottom:5px;
+		margin-bottom:2px;
 		position:relative;
 		overflow:hidden;
 		display:table-cell;
@@ -349,6 +366,10 @@ font-size:em(8);
 				@media screen and (min-width:em(700)) 
 				{
 				font-size:em(16);
+				@include spanner_too (5, 800, 8, 1);
+				margin-bottom:5px;
+
+
 				}
 		
 		
@@ -704,8 +725,13 @@ leaderboard page
 	text-align:center;
 	border-radius:3px;
 	padding:12px 0 0 0;
-	margin:30px auto 30px;
+	margin:15px auto 15px;
 	cursor:pointer;
+	
+				@media screen and (min-width:em(600)) 
+				{
+				margin:30px auto 30px;
+				}
 	
 		&:hover
 			{
@@ -744,7 +770,7 @@ leaderboard page
 
 		li
 		{
-		margin:0 0 20px 0;
+		margin:0 0 15px 0;
 		
 			.hider
 			{
