@@ -13,6 +13,17 @@ body {
   font-family: 'lato';
   color: #444; }
 
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color .3s; }
+  a:hover {
+    color: #d0d0d0; }
+
+i {
+  font-family: 'icon';
+  font-style: normal; }
+
 h2 {
   font-size: 1.125em;
   font-weight: 700; }
@@ -44,6 +55,78 @@ ul li {
   list-style-type: none;
   margin: 0px;
   padding: 0px; }
+
+#holder {
+  border: 1px solid black;
+  position: absolute;
+  width: 60%;
+  margin: 0 auto;
+  z-index: 1000;
+  padding: 0;
+  display: none;
+  top: 15%;
+  left: 0;
+  right: 0;
+  background-image: url("../siteart/lightpaperfibers_@2X.png");
+  background-size: 300px 500px;
+  box-shadow: 3px 3px 3px #999;
+  border: 1px solid white; }
+  #holder .close_box {
+    position: absolute;
+    right: 10px;
+    top: -10px;
+    z-index: 100000;
+    color: #d0d0d0;
+    padding: 0px 4px 1px;
+    background-color: white;
+    border-radius: 2px;
+    border: 1px solid #d0d0d0; }
+  #holder li {
+    border: 1px solid red;
+    width: 100%;
+    position: relative;
+    padding: 0 0 100% 0;
+    background-image: none; }
+    #holder li .bingo_image {
+      width: 100%;
+      height: auto;
+      position: absolute;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 0px; }
+    #holder li .bingo_tag {
+      width: 100%;
+      height: auto;
+      position: absolute;
+      margin: auto;
+      top: 15%;
+      left: 0;
+      right: 0;
+      padding: 0px 5px;
+      text-align: center;
+      font-size: .9em;
+      display: block; }
+    #holder li .hashtag {
+      display: block;
+      font-weight: 700;
+      color: #666;
+      position: absolute;
+      bottom: 8px;
+      text-align: center;
+      width: 100%;
+      margin: 0px;
+      font-size: 0.875em; }
+      @media screen and (min-width: 43.75em) {
+        #holder li .hashtag {
+          font-size: 1em; } }
+      #holder li .hashtag:before {
+        content: '#'; }
+  #holder .active {
+    border: 0px;
+    margin: 0px; }
 
 .bingo_headline {
   width: 16.66667%;
@@ -88,7 +171,8 @@ ul li {
   background-color: rgba(255, 99, 71, 0.5);
   padding: 20px;
   box-shadow: 2px 2px 3px #d0d0d0;
-  border: 1px solid white; }
+  border: 1px solid white;
+  border: 1px solid red; }
 
 .bingo_container {
   width: auto;
@@ -104,13 +188,9 @@ ul li {
   background-color: rgba(255, 99, 71, 0.5); }
 
 .bingo_grid {
-  width: 100%;
-  margin-right: 0%;
-  box-sizing: border-box;
   padding: 0px;
   margin: 0 auto;
   max-width: 800px;
-  min-width: 550px;
   border-top: 1px solid biege;
   border-left: 1px solid beigh;
   border-bottom: 1px solid tan;
@@ -128,11 +208,16 @@ ul li {
     position: relative;
     overflow: hidden;
     display: table-cell;
-    background-image: url("../siteart/lightpaperfibers_@2X.png");
-    background-size: 300px 500px;
+    background-image: url("../siteart/mag.svg"), url("../siteart/lightpaperfibers_@2X.png");
+    background-size: 40%, 300px 500px;
+    background-repeat: no-repeat, repeat;
+    background-position: center center;
     font-size: 0.875em;
     border-radius: 3px;
     border: 2px solid #fe8066; }
+    @media screen and (min-width: 34.375em) {
+      .bingo_grid li {
+        background-image: none, url("../siteart/lightpaperfibers_@2X.png"); } }
     @media screen and (min-width: 43.75em) {
       .bingo_grid li {
         font-size: 1em; } }
@@ -170,7 +255,11 @@ ul li {
   right: 0;
   padding: 0px 5px;
   text-align: center;
-  font-size: .9em; }
+  font-size: .9em;
+  display: none; }
+  @media screen and (min-width: 34.375em) {
+    .bingo_tag {
+      display: block; } }
 
 .hashtag {
   display: block;
@@ -211,7 +300,8 @@ leaderboard page
       width: 50%;
       margin-right: 0%;
       box-sizing: border-box;
-      float: left; } }
+      float: left;
+      padding: 0 0 0 10px; } }
   @media screen and (min-width: 46.875em) {
     .right_side {
       width: 62.5%;
@@ -286,10 +376,11 @@ leaderboard page
     width: 49.19614%;
     margin-right: 1.60772%;
     box-sizing: border-box;
-    border: 1px solid red;
     float: left; }
     .latest_items li:nth-child(2n) {
       margin-right: 0px; }
+    .latest_items li:nth-child(2n+1) {
+      clear: left; }
     @media screen and (min-width: 31.25em) {
       .latest_items li {
         width: 100%;
@@ -308,11 +399,14 @@ leaderboard page
         .latest_items li:nth-child(2n) {
           margin-right: 1.60772%; }
         .latest_items li:nth-child(3n) {
-          margin-right: 0px; } }
+          margin-right: 0px; }
+        .latest_items li:nth-child(2n+1) {
+          clear: none; }
+        .latest_items li:nth-child(3n+4) {
+          clear: left; } }
     .latest_items li .user_avatar {
       width: 30px;
-      height: 30px;
-      border: 1px solid red; }
+      height: 30px; }
       @media screen and (min-width: 46.875em) {
         .latest_items li .user_avatar {
           width: 45px;
@@ -320,8 +414,7 @@ leaderboard page
     .latest_items li .user_info {
       width: auto;
       display: inline-table-cell;
-      margin-left: 38px;
-      border: 1px solid red; }
+      margin-left: 38px; }
       @media screen and (min-width: 46.875em) {
         .latest_items li .user_info {
           margin-left: 52px; } }
